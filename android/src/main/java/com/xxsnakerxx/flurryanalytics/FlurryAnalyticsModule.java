@@ -64,6 +64,11 @@ public class FlurryAnalyticsModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
+  public void logError(String errorName, String message) {
+    FlurryAgent.onError(errorName, message, null);
+  }
+
+  @ReactMethod
   public void logEvent(String eventName, boolean timed) {
     FlurryAgent.logEvent(eventName, timed);
   }

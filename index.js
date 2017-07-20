@@ -67,6 +67,10 @@ export default class FlurryAnalytics {
     RNFlurryAnalytics.setCrashReportingEnabled(enabled);
   }
 
+  static logError(errorName, message) {
+      RNFlurryAnalytics.logError(errorName, message);
+  }
+
   /**
    * There are three overloads
    * - logEvent(eventName)

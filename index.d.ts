@@ -27,6 +27,11 @@ declare module 'react-native-flurry-analytics' {
 		setCrashReportingEnabled(enabled: boolean);
 
 		/**
+		 * e.g. FlurryAnalytics.logError('subsystemCrash', 'Error message')
+		 */
+		logError(errorName: string, message: string);
+
+		/**
 		 * e.g. FlurryAnalytics.logEvent('eventName'); FlurryAnalytics.logEvent('eventName', {param: 'true'}, true);
 		 */
 		logEvent(eventName: string, params?: any, timed?: boolean);

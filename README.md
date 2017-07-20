@@ -146,6 +146,11 @@ FlurryAnalytics.logEvent('eventName', {param: 'true'});
 FlurryAnalytics.logEvent('eventName', {param: 'true'}, true);
 ```
 
+#### logError(string errorName, string message)
+```javascript
+FlurryAnalytics.logError('errorName', 'message')
+```
+
 #### endTimedEvent(string eventName, object params)
 
 ```javascript

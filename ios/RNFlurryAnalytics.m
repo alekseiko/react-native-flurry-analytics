@@ -40,6 +40,11 @@ RCT_EXPORT_METHOD(setCrashReportingEnabled:(BOOL)enabled)
   [sessionBuilder withCrashReporting:enabled];
 }
 
+RCT_EXPORT_METHOD(logError:(NSString *)errorName message:(NSString *)message)
+{
+	[Flurry logError:errorName message:message exception:nil];
+}
+
 RCT_EXPORT_METHOD(logEvent:(NSString *)eventName timed:(BOOL)timed)
 {
 	[Flurry logEvent:eventName timed:timed];
